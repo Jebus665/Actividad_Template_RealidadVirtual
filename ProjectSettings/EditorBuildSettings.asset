@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ARSceneTemplate.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ARPlaneDetection.unity
     guid: f3b4ba411f1870e4da3613795227c393
+  - enabled: 0
+    path: Assets/Scenes/ARRayCast.unity
+    guid: 530cf8eb54a715845a485b71c06e6f24
+  - enabled: 1
+    path: Assets/Scenes/ARRaycast_Act.unity
+    guid: c05cab3a61835844c88e2bb7e07abccf
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 0f4e662b337f730438afd731426c2416, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
