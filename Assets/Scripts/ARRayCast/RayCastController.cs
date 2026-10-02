@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
-public class PlaceOnPlane : MonoBehaviour
+public class RayCastController : MonoBehaviour
 {
     [Header("Referencias AR")]
     [SerializeField] private ARRaycastManager raycastManager;
@@ -14,12 +14,12 @@ public class PlaceOnPlane : MonoBehaviour
     [SerializeField] private GameObject horizontalModelPrefab;
     [SerializeField] private GameObject verticalModelPrefab;
 
-    // Lista reutilizable para no generar basura (GC) en cada frame
+    private GameObject selectedModel;
+
     private static readonly List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     private void Update()
     {
-        // Con el New Input System detectamos el toque desde Touchscreen.current
         if (Touchscreen.current == null)
             return;
 
@@ -30,41 +30,60 @@ public class PlaceOnPlane : MonoBehaviour
         }
     }
 
+    public void SelectHorizontalModel()
+    {
+        selectedModel = horizontalModelPrefab;
+        Debug.Log("Modelo horizontal seleccionado");
+    }
+
+    public void SelectVerticalModel()
+    {
+        selectedModel = verticalModelPrefab;
+        Debug.Log("Modelo vertical seleccionado");
+    }
+
     private void TryPlaceObject(Vector2 screenPosition)
     {
-        // Solo nos interesan los hits dentro del polígono detectado del plano
-        if (!raycastManager.Raycast(screenPosition, hits, TrackableType.PlaneWithinPolygon))
+        if (selectedModel == null)
+            return;
+
+        if (!raycastManager.Raycast(
+            screenPosition,
+            hits,
+            TrackableType.PlaneWithinPolygon))
             return;
 
         ARRaycastHit hit = hits[0];
         Pose hitPose = hit.pose;
 
-        // Obtenemos el ARPlane concreto que fue golpeado, a partir de su trackableId
         ARPlane plane = planeManager.GetPlane(hit.trackableId);
+
         if (plane == null)
             return;
 
-        GameObject prefabToInstantiate = GetPrefabForAlignment(plane.alignment);
-
-        if (prefabToInstantiate != null)
+        if (selectedModel == horizontalModelPrefab)
         {
-            Instantiate(prefabToInstantiate, hitPose.position, hitPose.rotation);
+            if (plane.alignment != PlaneAlignment.HorizontalUp &&
+                plane.alignment != PlaneAlignment.HorizontalDown)
+            {
+                Debug.Log("El modelo horizontal solo puede colocarse en planos horizontales.");
+                return;
+            }
         }
-    }
 
-    private GameObject GetPrefabForAlignment(PlaneAlignment alignment)
-    {
-        switch (alignment)
+        if (selectedModel == verticalModelPrefab)
         {
-            case PlaneAlignment.HorizontalUp:
-            case PlaneAlignment.HorizontalDown:
-                return horizontalModelPrefab;
-
-            case PlaneAlignment.Vertical:
-                return verticalModelPrefab;
-
-            default:
-                return null;
+            if (plane.alignment != PlaneAlignment.Vertical)
+            {
+                Debug.Log("El modelo vertical solo puede colocarse en planos verticales.");
+                return;
+            }
         }
+
+        Instantiate(
+            selectedModel,
+            hitPose.position,
+            hitPose.rotation
+        );
     }
 }
