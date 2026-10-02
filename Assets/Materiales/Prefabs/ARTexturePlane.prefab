@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7975110584214409950}
   - component: {fileID: 1130466590125401693}
   - component: {fileID: 5345786554010185526}
+  - component: {fileID: -5009412359132421925}
   m_Layer: 0
   m_Name: ARTexturePlane
   m_TagString: Untagged
@@ -113,3 +114,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &-5009412359132421925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4294761160899627659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f66da7470dce8f4d821d71dd2b1d4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.ARFoundation::UnityEngine.XR.ARFoundation.ARPlane
+  m_DestroyOnRemoval: 1
+  m_VertexChangedThreshold: 0.01

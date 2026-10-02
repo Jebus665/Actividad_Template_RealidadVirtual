@@ -1,59 +1,70 @@
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.EnhancedTouch;
-using System.Collections.Generic;
-using TMPro;
 
-public class RaycastController : MonoBehaviour
+public class PlaceOnPlane : MonoBehaviour
 {
-    [SerializeField] ARRaycastManager raycastManager;
-    [SerializeField] GameObject objectToPlace;
-    [SerializeField] TMP_Text debugText;
+    [Header("Referencias AR")]
+    [SerializeField] private ARRaycastManager raycastManager;
+    [SerializeField] private ARPlaneManager planeManager;
 
-    List<ARRaycastHit> hits = new List<ARRaycastHit> ();
+    [Header("Modelos a instanciar")]
+    [SerializeField] private GameObject horizontalModelPrefab;
+    [SerializeField] private GameObject verticalModelPrefab;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void OnEnable()
+    // Lista reutilizable para no generar basura (GC) en cada frame
+    private static readonly List<ARRaycastHit> hits = new List<ARRaycastHit>();
+
+    private void Update()
     {
-        EnhancedTouchSupport.Enable();
-    }
-
-    private void OnDisable()
-    {
-        EnhancedTouchSupport.Disable();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        var activeTouches = UnityEngine.InputSystem.EnhancedTouch.Touch.activeTouches;
-        if (activeTouches.Count == 0)
-        {
-            debugText.text = "Esperando touch . . .";
-            return;
-        }
-        var touch = activeTouches[0];
-
-        Debug.Log("Touch Detectado");
-        debugText.text = "Touch Detectado";
-
-        if (touch.phase != UnityEngine.InputSystem.TouchPhase.Began)
+        // Con el New Input System detectamos el toque desde Touchscreen.current
+        if (Touchscreen.current == null)
             return;
 
-        if (raycastManager.Raycast(activeTouches[0].screenPosition, hits, TrackableType.PlaneWithinPolygon))
+        if (Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
         {
-            Debug.Log("Hit Encontrado");
-            Pose hitPose = hits[0].pose;
-            debugText.text = "Hit: " + hitPose.position;
-            Instantiate(objectToPlace, hitPose.position, hitPose.rotation);
+            Vector2 touchPosition = Touchscreen.current.primaryTouch.position.ReadValue();
+            TryPlaceObject(touchPosition);
         }
-        else
-        {
-            Debug.Log("No se encontro plano");
-            debugText.text = "No Hit";
-        }
+    }
 
+    private void TryPlaceObject(Vector2 screenPosition)
+    {
+        // Solo nos interesan los hits dentro del polígono detectado del plano
+        if (!raycastManager.Raycast(screenPosition, hits, TrackableType.PlaneWithinPolygon))
+            return;
+
+        ARRaycastHit hit = hits[0];
+        Pose hitPose = hit.pose;
+
+        // Obtenemos el ARPlane concreto que fue golpeado, a partir de su trackableId
+        ARPlane plane = planeManager.GetPlane(hit.trackableId);
+        if (plane == null)
+            return;
+
+        GameObject prefabToInstantiate = GetPrefabForAlignment(plane.alignment);
+
+        if (prefabToInstantiate != null)
+        {
+            Instantiate(prefabToInstantiate, hitPose.position, hitPose.rotation);
+        }
+    }
+
+    private GameObject GetPrefabForAlignment(PlaneAlignment alignment)
+    {
+        switch (alignment)
+        {
+            case PlaneAlignment.HorizontalUp:
+            case PlaneAlignment.HorizontalDown:
+                return horizontalModelPrefab;
+
+            case PlaneAlignment.Vertical:
+                return verticalModelPrefab;
+
+            default:
+                return null;
+        }
     }
 }
