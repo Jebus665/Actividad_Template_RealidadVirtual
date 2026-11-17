@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: Unity.XR.ARSubsystems::UnityEngine.XR.ARSubsystems.XRReferenceImageLibrary
+  m_GuidLow: 4665918840948525351
+  m_GuidHigh: 8458739772408196786
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5483120240755560727
+      m_GuidHigh: 2285476038055404194
+    m_SerializedTextureGuid:
+      m_GuidLow: 13440095857572419019
+      m_GuidHigh: 4259715122420293834
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Derp
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5668338151570418414
+      m_GuidHigh: 5969230859760211840
+    m_SerializedTextureGuid:
+      m_GuidLow: 16083742194968921698
+      m_GuidHigh: 18233607328395893640
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: usagi
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5365400053904583968
+      m_GuidHigh: 15444911871864354699
+    m_SerializedTextureGuid:
+      m_GuidLow: 14331853591171314331
+      m_GuidHigh: 9536959125189750475
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: momonga
+    m_Texture: {fileID: 0}
