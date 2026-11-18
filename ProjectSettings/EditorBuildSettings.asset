@@ -26,9 +26,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Departamental.unity
     guid: c7170147039fd9b4593a9b40ab12f0ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ARImageTraking.unity
     guid: 2463e9a03c4252f43bc50c85d501f8e5
+  - enabled: 1
+    path: Assets/Scenes/ARMultipleImageTracking.unity
+    guid: 3e5aff5ac45e80b4d97a19440a922008
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 0f4e662b337f730438afd731426c2416, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
