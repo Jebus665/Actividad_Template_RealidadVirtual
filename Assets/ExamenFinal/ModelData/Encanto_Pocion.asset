@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e78ee99babf1f434aae61f34fa373a81, type: 3}
+  m_Name: Encanto_Pocion
+  m_EditorClassIdentifier: Assembly-CSharp::ModelData
+  modelName: Encanto_Pocion
+  description: "Representa la atracci\xF3n, el cari\xF1o y la conexi\xF3n emocional.
+    Su magia puede despertar sentimientos e influir en el v\xEDnculo entre seres. "
+  category: Magia Gris
+  level: 1
+  icon: {fileID: 21300000, guid: fcaa5b2585e299f48acdf7e20da823bf, type: 3}
+  prefab: {fileID: 6662297055234979377, guid: 1175940ce5b863245ab9ac364090169d, type: 3}

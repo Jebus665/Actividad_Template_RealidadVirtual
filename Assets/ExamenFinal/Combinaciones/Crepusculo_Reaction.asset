@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0692b42c2e037f7448ea1451c08f1d93, type: 3}
+  m_Name: Crepusculo_Reaction
+  m_EditorClassIdentifier: Assembly-CSharp::PotionReaction
+  Pocion1: {fileID: 11400000, guid: 68b3696fa07e4ba40bd3ff7cda15cee0, type: 2}
+  Pocion2: {fileID: 11400000, guid: 16499de2b8b57bd42b0d1249c327e824, type: 2}
+  result: {fileID: 11400000, guid: f3dfdcab8b8bb254ebd8c66a61c1f85d, type: 2}
+  interactionDistance: 0.5
+  reactionSound: {fileID: 8300000, guid: 11a89536894d1744f9550bcd00b2c326, type: 3}

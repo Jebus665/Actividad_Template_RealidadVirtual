@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e78ee99babf1f434aae61f34fa373a81, type: 3}
+  m_Name: Crepusculo_Pocion
+  m_EditorClassIdentifier: Assembly-CSharp::ModelData
+  modelName: Crepusculo_Pocion
+  description: "Nace de Umbr\xEDa y Aurora. Fusiona luz y oscuridad, permitiendo
+    controlar fuerzas opuestas y crear un balance entre ellas. "
+  category: Magia Negra
+  level: 2
+  icon: {fileID: 21300000, guid: d57f8c816d388d347b73058b729e1899, type: 3}
+  prefab: {fileID: 8470242038840475598, guid: 14b5011f3772a534a865090fcc6dc4a6, type: 3}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e78ee99babf1f434aae61f34fa373a81, type: 3}
+  m_Name: Ascension_Pocion
+  m_EditorClassIdentifier: Assembly-CSharp::ModelData
+  modelName: Ascension_Pocion
+  description: "Nace de Aurora y \xC9ter. Simboliza la evoluci\xF3n m\xE1gica, la
+    purificaci\xF3n y el paso a un estado superior, liberando el potencial oculto. "
+  category: Magia Blanca
+  level: 2
+  icon: {fileID: 21300000, guid: 14f34e5ee26d7bb4fa188d948d915c5d, type: 3}
+  prefab: {fileID: 1214212220544538454, guid: 4986f2418fed96d45ab27c654e9595e4, type: 3}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e78ee99babf1f434aae61f34fa373a81, type: 3}
+  m_Name: Euforia_Pocion
+  m_EditorClassIdentifier: Assembly-CSharp::ModelData
+  modelName: Euforia_Pocion
+  description: "Nace de Encanto y Aurora. Amplifica las emociones positivas, genera
+    entusiasmo y llena de energ\xEDa a quien entra en contacto con ella. "
+  category: 'Magia Gris '
+  level: 2
+  icon: {fileID: 21300000, guid: dbe239bebca966249b352336a12c5e16, type: 3}
+  prefab: {fileID: 6617591294482490017, guid: 66156a86aaa2f6a4c9333b00c55d4fc4, type: 3}
