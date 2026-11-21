@@ -1,8 +1,7 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
-using TMPro;
 //using UnityEngine.UIElements;
-using UnityEditor;
 using UnityEngine.UI;
 
 public class ModelRaycast : MonoBehaviour
@@ -24,32 +23,32 @@ public class ModelRaycast : MonoBehaviour
     }
     void Update()
     {
-        foreach(var touch in UnityEngine.InputSystem.EnhancedTouch.Touch.activeTouches)
+        foreach (var touch in UnityEngine.InputSystem.EnhancedTouch.Touch.activeTouches)
         {
             if (!touch.began)
                 continue;
             Ray ray = arCamera.ScreenPointToRay(touch.screenPosition);
 
-            if(Physics.Raycast(ray, out RaycastHit hit))
+            if (Physics.Raycast(ray, out RaycastHit hit))
             {
                 ModelInfo modelInfo = hit.collider.GetComponent<ModelInfo>();
 
-                //if(modelInfo != null && modelInfo != null)
-                //{
-                //    ShowInfo(modelInfo.Data);
-                //}
+                if(modelInfo != null && modelInfo != null)
+                {
+                    ShowInfo(modelInfo.data);
+                }
             }
         }
     }
 
-    private void  ShowInfo(ModelData data)
+    private void ShowInfo(ModelData data)
     {
         modelName.text = data.name;
         descriptionText.text = data.description;
         categoryText.text = data.category;
         levelText.text = "Nivel: " + data.level;
         iconImage.sprite = data.icon;
-        
-        Debug.Log("Objeto Seleccionado" + data); 
+
+        Debug.Log("Objeto Seleccionado" + data);
     }
 }

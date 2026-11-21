@@ -339,6 +339,9 @@ MonoBehaviour:
   imageSpawner: {fileID: 1752003599}
   reactions:
   - {fileID: 11400000, guid: 17184f95dcc9977468489b7dc866586c, type: 2}
+  - {fileID: 11400000, guid: 387137c31364f644eb3598a2cf30a187, type: 2}
+  - {fileID: 11400000, guid: 67e64b40c8004c94399eef4fcee3e693, type: 2}
+  - {fileID: 11400000, guid: c657cbe40679b6f46819d676b8b686b3, type: 2}
   audioSource: {fileID: 56864121}
 --- !u!4 &56864120
 Transform:
@@ -1318,6 +1321,63 @@ MonoBehaviour:
   m_SerializedLibrary: {fileID: 11400000, guid: 034159e9d9add5444b1472ba16d99c59, type: 2}
   m_MaxNumberOfMovingImages: 4
   m_TrackedImagePrefab: {fileID: 0}
+--- !u!1001 &1174798954
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6662297055234979377, guid: 1175940ce5b863245ab9ac364090169d, type: 3}
+      propertyPath: m_Name
+      value: Encanto_Pocion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865830093927816549, guid: 1175940ce5b863245ab9ac364090169d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865830093927816549, guid: 1175940ce5b863245ab9ac364090169d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865830093927816549, guid: 1175940ce5b863245ab9ac364090169d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865830093927816549, guid: 1175940ce5b863245ab9ac364090169d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865830093927816549, guid: 1175940ce5b863245ab9ac364090169d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865830093927816549, guid: 1175940ce5b863245ab9ac364090169d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865830093927816549, guid: 1175940ce5b863245ab9ac364090169d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865830093927816549, guid: 1175940ce5b863245ab9ac364090169d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865830093927816549, guid: 1175940ce5b863245ab9ac364090169d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865830093927816549, guid: 1175940ce5b863245ab9ac364090169d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1175940ce5b863245ab9ac364090169d, type: 3}
 --- !u!1 &1209439997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,3 +2043,4 @@ SceneRoots:
   - {fileID: 1770969435}
   - {fileID: 1752003600}
   - {fileID: 56864120}
+  - {fileID: 1174798954}

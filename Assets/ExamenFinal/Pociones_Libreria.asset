@@ -25,7 +25,7 @@ MonoBehaviour:
       m_GuidHigh: 9923591599680711896
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Encanto_Carta
+    m_Name: Encanto_Pocion
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 4660114230589457499
@@ -35,7 +35,7 @@ MonoBehaviour:
       m_GuidHigh: 2166126419940561834
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Umbria_Carta
+    m_Name: Umbria_Pocion
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5202525303265832980
@@ -45,7 +45,7 @@ MonoBehaviour:
       m_GuidHigh: 6564798564001270075
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Aurora_Carta
+    m_Name: Aurora_Pocion
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5407115341001618633
@@ -55,65 +55,5 @@ MonoBehaviour:
       m_GuidHigh: 580593877821890889
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Eter_Carta
-    m_Texture: {fileID: 0}
-  - m_SerializedGuid:
-      m_GuidLow: 4887532680025823850
-      m_GuidHigh: 3070922126757229454
-    m_SerializedTextureGuid:
-      m_GuidLow: 8490509723459180983
-      m_GuidHigh: 106584122042300666
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: Pesadilla_Carta
-    m_Texture: {fileID: 0}
-  - m_SerializedGuid:
-      m_GuidLow: 4639810000550934513
-      m_GuidHigh: 17517811385540596910
-    m_SerializedTextureGuid:
-      m_GuidLow: 109350613930972648
-      m_GuidHigh: 14746874603743079354
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: Euforia_Carta
-    m_Texture: {fileID: 0}
-  - m_SerializedGuid:
-      m_GuidLow: 4661383708947636034
-      m_GuidHigh: 88892109562776710
-    m_SerializedTextureGuid:
-      m_GuidLow: 3153880087463717515
-      m_GuidHigh: 5436538469872026107
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: Fascinacion_Carta
-    m_Texture: {fileID: 0}
-  - m_SerializedGuid:
-      m_GuidLow: 4745643356278505044
-      m_GuidHigh: 15304941790122488220
-    m_SerializedTextureGuid:
-      m_GuidLow: 17326558315132107803
-      m_GuidHigh: 18335066538929693418
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: Crepusculo_Carta
-    m_Texture: {fileID: 0}
-  - m_SerializedGuid:
-      m_GuidLow: 5486510969131450304
-      m_GuidHigh: 2715340400960345760
-    m_SerializedTextureGuid:
-      m_GuidLow: 1816343234685176190
-      m_GuidHigh: 16369960080099449481
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: VacioArcano_Carta
-    m_Texture: {fileID: 0}
-  - m_SerializedGuid:
-      m_GuidLow: 5166939636519927099
-      m_GuidHigh: 15551815434036184983
-    m_SerializedTextureGuid:
-      m_GuidLow: 12120374698360641795
-      m_GuidHigh: 8257357176742584506
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: Ascension_Carta
+    m_Name: Eter_Pocion
     m_Texture: {fileID: 0}

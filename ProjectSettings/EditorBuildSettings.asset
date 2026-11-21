@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final_Pociones.unity
     guid: 407fe2198fa1dac40b1c49098664f9f3
+  - enabled: 0
+    path: Assets/Scenes/Final_Pociones_Respaldo.unity
+    guid: e19ec81da2868714f8d490a3ba1fcc97
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 0f4e662b337f730438afd731426c2416, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

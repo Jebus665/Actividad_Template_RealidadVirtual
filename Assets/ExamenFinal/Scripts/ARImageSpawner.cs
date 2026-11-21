@@ -53,7 +53,7 @@ public class ARImageSpawner : MonoBehaviour
         string imageName = image.referenceImage.name;
         ModelData data = FindPotion(imageName);
 
-        if (data != null || data.prefab == null)
+        if (data == null || data.prefab == null)
 
             return;
 
